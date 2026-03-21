@@ -31,6 +31,10 @@ nav a:first-child {
 	width: 8vh;
 }
 
+nav a.mobile-only {
+	display: none;
+}
+
 table {
 	min-width: 90vw;
 }
@@ -133,7 +137,7 @@ section.page {
 	padding-right: 10vw;
 }
 
-#about p {
+section.page p {
 	font-size: 1.5em;
 }
 
@@ -176,5 +180,12 @@ section.page {
 	#schedule {
 		padding-left: 1em;
 		padding-right: 1em;
+	}
+	nav a.mobile-only {
+		display: block;
+	}
+
+	nav a.desktop-only {
+		display: none;
 	}
 }
