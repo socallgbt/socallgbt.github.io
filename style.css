@@ -1,0 +1,160 @@
+body {
+	color: #b8b8cf;
+	background-color: #322c41;
+	padding: 0;
+	margin: 0;
+	font-family: "DM Sans", sans-serif;
+}
+
+nav {
+	height: 10vh;
+	border-bottom: 1px solid #b8b8cf;
+	margin-left: 1em;
+	margin-right: 1em;
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	color: #b8b8cf;
+	margin-left: 1em;
+	display: block;
+}
+
+nav a:hover {
+	color: #fff;
+}
+
+nav a:first-child {
+	margin-left: 0;
+	height: 8vh;
+	width: 8vh;
+}
+
+.spacer {
+	flex: 1;
+}
+
+#header {
+	height: 65vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#header h1,
+#header h3 {
+	line-height: 0.9;
+}
+
+#header h1 {
+	margin-bottom: 0;
+}
+
+#header h3 {
+	margin-top: 0;
+}
+
+#location {
+	display: flex;
+	flex-direction: row;
+	height: 25vh;
+	padding: 1em;
+	font-size: 2em;
+	color: #332c41;
+	background: linear-gradient(
+		45deg,
+		#d93633,
+		#ff981d,
+		#ffd900,
+		#9abe5d,
+		#2c97c7,
+		#6a449e
+	);
+}
+
+#location-right {
+	flex: 1;
+	text-align: right;
+}
+
+#location-right a {
+	border: 2px solid #fff;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 1em;
+	border-radius: 100vw;
+	text-align: center;
+}
+
+#location-right a:hover {
+	text-decoration: underline;
+}
+
+#about,
+#schedule {
+	min-height: 100vh;
+	padding: 1em;
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+#about p {
+	font-size: 1.5em;
+}
+
+#schedule-table {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1.5em;
+}
+
+#hero {
+	height: 40vh;
+	margin: 0;
+}
+
+table {
+	min-width: 90vw;
+}
+
+th,
+td {
+	text-align: center;
+	padding: 0.25em;
+}
+
+th:last-child,
+td:last-child {
+	text-align: left;
+}
+
+@media (max-aspect-ratio: 1) {
+	#hero {
+		height: auto;
+		max-width: 90vw;
+		margin: 1em;
+	}
+	#location {
+		font-size: 1.5em;
+	}
+	table,
+	th,
+	td {
+		border: 0.5px solid #b8b8cf;
+		border-collapse: collapse;
+	}
+	th,
+	td {
+		text-align: right;
+		padding: 0.25em;
+	}
+	#about,
+	#schedule {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
