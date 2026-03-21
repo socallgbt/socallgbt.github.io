@@ -45,7 +45,9 @@ nav a:first-child {
 
 #header h1,
 #header h3 {
-	line-height: 0.9;
+	line-height: 95%;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 #header h1 {
@@ -138,7 +140,7 @@ td:last-child {
 	text-align: left;
 }
 
-@media (max-aspect-ratio: 1) {
+@media only screen and (max-aspect-ratio: 1) {
 	#hero {
 		height: auto;
 		max-width: 90vw;
@@ -151,7 +153,8 @@ td:last-child {
 	th,
 	td {
 		border: 0.5px solid #b8b8cf;
-		border-collapse: collapse;
+		border-spacing: 0;
+		/*border-collapse: collapse;*/
 	}
 	th,
 	td {
