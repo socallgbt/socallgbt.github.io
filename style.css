@@ -31,6 +31,46 @@ nav a:first-child {
 	width: 8vh;
 }
 
+table {
+	min-width: 90vw;
+}
+
+footer {
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0;
+}
+
+th,
+td {
+	text-align: center;
+	padding: 0.25em;
+}
+
+th:last-child,
+td:last-child {
+	text-align: left;
+}
+
+.page-divider {
+	margin: 0;
+	height: 5vh;
+	padding: 0;
+}
+
+.page-divider,
+#location {
+	background: linear-gradient(
+		45deg,
+		#d93633,
+		#ff981d,
+		#ffd900,
+		#9abe5d,
+		#2c97c7,
+		#6a449e
+	);
+}
+
 .spacer {
 	flex: 1;
 }
@@ -65,15 +105,6 @@ nav a:first-child {
 	padding: 1em;
 	font-size: 2em;
 	color: #332c41;
-	background: linear-gradient(
-		45deg,
-		#d93633,
-		#ff981d,
-		#ffd900,
-		#9abe5d,
-		#2c97c7,
-		#6a449e
-	);
 }
 
 #location-right {
@@ -95,8 +126,7 @@ nav a:first-child {
 	text-decoration: underline;
 }
 
-#about,
-#schedule {
+section.page {
 	min-height: 100vh;
 	padding: 1em;
 	padding-left: 10vw;
@@ -119,27 +149,7 @@ nav a:first-child {
 	margin: 0;
 }
 
-table {
-	min-width: 90vw;
-}
-
-footer {
-	padding-left: 1em;
-	padding-right: 1em;
-	margin: 0;
-}
-
-th,
-td {
-	text-align: center;
-	padding: 0.25em;
-}
-
-th:last-child,
-td:last-child {
-	text-align: left;
-}
-
+/*Mobile phones and narrow browsers*/
 @media only screen and (max-aspect-ratio: 1) {
 	#hero {
 		height: auto;
@@ -154,6 +164,7 @@ td:last-child {
 	td {
 		border: 0.5px solid #b8b8cf;
 		border-spacing: 0;
+		/*Apparently border-collapse does not work on iOS*/
 		/*border-collapse: collapse;*/
 	}
 	th,
