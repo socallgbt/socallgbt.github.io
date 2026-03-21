@@ -51,6 +51,10 @@ td {
 	padding: 0.25em;
 }
 
+tr.live {
+	font-weight: 1000;
+}
+
 th:last-child,
 td:last-child {
 	text-align: left;
@@ -170,6 +174,11 @@ section.page p {
 		border-spacing: 0;
 		/*Apparently border-collapse does not work on iOS*/
 		/*border-collapse: collapse;*/
+	}
+	tr.live td {
+		border: 0.5px solid #322c41;
+		color: #322c41;
+		background-color: #b8b8cf;
 	}
 	th,
 	td {
