@@ -119,6 +119,10 @@ td:last-child {
 	color: #332c41;
 }
 
+#location i {
+	font-size: 0.75em;
+}
+
 #location-right {
 	flex: 1;
 	text-align: right;
