@@ -55,6 +55,10 @@ td {
 	padding: 0.25em;
 }
 
+tbody tr:nth-child(odd) {
+	background-color: #00000050;
+}
+
 tr.live {
 	font-weight: 1000;
 }
@@ -149,8 +153,26 @@ section.page {
 	padding-right: 10vw;
 }
 
-section.page p {
+section.page p,
+section.page ul,
+section.page h3 {
 	font-size: 1.5em;
+}
+
+section.page h2 {
+	font-size: 2em;
+}
+
+ul {
+	padding-left: 1em;
+}
+
+li {
+	padding-top: 0.5em;
+}
+
+li:first-child {
+	padding-top: 0;
 }
 
 #schedule-table {

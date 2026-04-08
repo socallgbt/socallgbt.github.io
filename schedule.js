@@ -3,11 +3,13 @@ let intervalID = undefined;
 /// Returns a total offset time in ms given the text of a table cell
 const cellToTime = (cellText) => {
 		const cellIsPM = cellText.substr(-2) == "PM",
-			cellSplit = cellText.substr(0, cellText.length - 2).split(":"),
-			hour = parseInt(cellSplit[0]),
-			min = cellSplit.length > 1 ? parseInt(cellSplit[1]) : 0,
-			totalHour = hour + (cellIsPM ? 12 : 0),
-			totalMin = totalHour * 60 + min;
+			cellSplit = cellText.substr(0, cellText.length - 2).split(":");
+		let hour = parseInt(cellSplit[0]);
+		if (hour != 12 && cellIsPM) {
+			hour += 12;
+		}
+		const min = cellSplit.length > 1 ? parseInt(cellSplit[1]) : 0,
+			totalMin = hour * 60 + min;
 		return totalMin * 60 * 1000;
 	},
 	mainLoop = () => {
@@ -27,7 +29,13 @@ const cellToTime = (cellText) => {
 			clearInterval(intervalID);
 			return;
 		}
+		let foundCurrentCell = false;
 		for (const row of rows) {
+			if (foundCurrentCell) {
+				//Panel IIIb
+				if (row.children.length < 3) row.classList.add("live");
+				break;
+			} else if (row.children.length < 3) continue;
 			if (row.children[0].tagName.toUpperCase() != "TD") {
 				//We are in the header
 				continue;
