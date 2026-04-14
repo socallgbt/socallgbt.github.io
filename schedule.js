@@ -29,13 +29,7 @@ const cellToTime = (cellText) => {
 			clearInterval(intervalID);
 			return;
 		}
-		let foundCurrentCell = false;
 		for (const row of rows) {
-			if (foundCurrentCell) {
-				//Panel IIIb
-				if (row.children.length < 3) row.classList.add("live");
-				break;
-			} else if (row.children.length < 3) continue;
 			if (row.children[0].tagName.toUpperCase() != "TD") {
 				//We are in the header
 				continue;
