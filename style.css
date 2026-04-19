@@ -133,18 +133,19 @@ td:last-child {
 }
 
 #location-right a {
-	border: 2px solid #fff;
-	color: #fff;
+	border: 2px solid #bbb;
+	color: #bbb;
 	display: inline-block;
 	text-decoration: none;
 	padding: 1em;
 	border-radius: 100vw;
 	text-align: center;
+	cursor: not-allowed;
 }
 
-#location-right a:hover {
+/*#location-right a:hover {
 	text-decoration: underline;
-}
+}*/
 
 section.page {
 	min-height: 100vh;
