@@ -114,6 +114,10 @@ td:last-child {
 	margin-top: 0;
 }
 
+#info {
+	padding: 1em;
+}
+
 #location {
 	display: flex;
 	flex-direction: row;
